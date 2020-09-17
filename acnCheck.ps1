@@ -18,14 +18,14 @@ Send-MailMessage -From <<email>> -To <<EMAIL ADDRESS>> -Subject "ACN ISSUE" -Bod
 $date = get-date
 
 # Create new PSobject for array values to properties
-            $asset = New-Object PSobject -Property @{
+            $track = New-Object PSobject -Property @{
                 'Time' = $date
                 'executionTime' = $x.executionTime
                 'Check' = $x.check
                 } 
 
 
-$asset | Select-Object -property 'Time', 'Execution Time', 'Check' | export-csv -path .\checkTracker.csv
+$track | Select-Object -property 'Time', 'Execution Time', 'Check' | export-csv -path .\checkTracker.csv
 
  
 }
