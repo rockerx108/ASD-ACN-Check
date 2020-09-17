@@ -10,7 +10,7 @@ if($x.check -ne 1) {
 $pwd = ConvertTo-SecureString "<<Key>>" -AsPlainText -Force
 $creds = New-Object System.Management.Automation.PSCredential ("SMTP_Injection", $pwd)
  
-Send-MailMessage -From nkeels@kd3v.com -To <<EMAIL ADDRESS>> -Subject "ACN ISSUE" -Body "There is currently a connection issue with one of the servers. Please attend to this issue at your earliest convenience." `
+Send-MailMessage -From <<email>> -To <<EMAIL ADDRESS>> -Subject "ACN ISSUE" -Body "There is currently a connection issue with one of the servers. Please attend to this issue at your earliest convenience." `
  -SmtpServer smtp.sparkpostmail.com -Port 587 -Credential $creds -UseSsl
 
 
